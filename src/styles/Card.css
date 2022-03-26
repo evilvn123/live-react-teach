@@ -1,0 +1,12 @@
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 300px;
+  overflow: hidden;
+}
+
+.card .image{
+  width: 100%;
+}

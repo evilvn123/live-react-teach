@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from "./components/Card";
+import image from "./images/photo-1453728013993-6d66e9c9123a.jpg";
+import image_2 from "./images/lasy_logo.png";
+import { useState } from "react";
 
 function App() {
+  const [images, setImages] = useState([
+    {
+      image: image,
+      title: "Picture 1",
+    },
+    {
+      image: image_2,
+      title: "Picture 2",
+    },
+  ]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {
+        images.map((item, index) => (
+          <Card key={index} image={item.image} title={item.title} />
+        ))
+      }
     </div>
   );
 }
