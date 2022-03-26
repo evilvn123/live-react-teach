@@ -14,13 +14,17 @@ function App() {
       title: "Picture 2",
     },
   ]);
+
+  const handleClick = () => {
+    console.log("Do something");
+  };
+
   return (
     <div>
-      {
-        images.map((item, index) => (
-          <Card key={index} image={item.image} title={item.title} />
-        ))
-      }
+      {images.map((item, index) => (
+        <Card key={index} image={item.image} title={item.title} />
+      ))}
+      <button onClick={handleClick}>Click me!</button>
     </div>
   );
 }
