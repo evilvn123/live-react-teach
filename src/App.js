@@ -17,7 +17,7 @@ function App() {
   ]);
 
   const handleClick = () => {
-    console.log("Do something");
+    console.log("Do something here!");
   };
 
   return (
