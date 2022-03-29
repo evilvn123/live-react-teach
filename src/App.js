@@ -17,7 +17,17 @@ function App() {
   ]);
 
   const handleClick = () => {
-    console.log("Do something here!");
+    setImages([
+      {
+        image: image,
+        title: "Picture 1",
+      },
+      {
+        image: image_2,
+        title: "Picture 2",
+      },
+    ]);
+    // setImages(currentImages => currentImages.push({//1 object chứa thông tin 1 ảnh}))
   };
 
   return (
